@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		003BF4A65A73F9D60E00DC1A /* libPods-CoquiMateMobile Production.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD887E8AF6ABB4F29C599728 /* libPods-CoquiMateMobile Production.a */; };
+		05BC9DF548FF4DE597675532 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 888ABE4F12474FB3B353BEB0 /* Poppins-SemiBold.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		347A107A2C2E48AAA2EBDEF2 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 206C5C4D05F34040BD9A52CE /* Poppins-Medium.ttf */; };
+		38FBCADD9617473A80ABF9C3 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1939507F2C864126841D3F6C /* Poppins-Bold.ttf */; };
+		4783E453C2F34088A277E19E /* DancingScript-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63D5BCA85F0441378FF9DC7E /* DancingScript-Medium.ttf */; };
+		532CAF8FBADE4B3FA35F7E0B /* DancingScript-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0E65BF8EE5B43B288A9DDFA /* DancingScript-Bold.ttf */; };
 		550C50585DEFB59330FA30BC /* libPods-CoquiMateMobile Dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1206D5B7627F2360133905B8 /* libPods-CoquiMateMobile Dev.a */; };
 		81AB9BB82411601600AC10FF /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* BootSplash.storyboard */; };
+		83D0722D4E1E467F8AE1D5C6 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = F7B76ACEACD24FF68239A0EC /* .gitkeep */; };
+		9C858976455143D6A9E4FEE4 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20B1FF573F9543B08C269B88 /* Poppins-Regular.ttf */; };
+		A97C607A2B45452CBDBA252E /* DancingScript-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6FC0B6C3BF34003B4525E05 /* DancingScript-SemiBold.ttf */; };
 		B36F32D3275F35C600165C9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		B36F32D4275F35C600165C9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		B36F32D8275F35C600165C9A /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* BootSplash.storyboard */; };
@@ -21,17 +29,9 @@
 		B36F32E7275F35ED00165C9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		B36F32EB275F35ED00165C9A /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* BootSplash.storyboard */; };
 		B36F32EC275F35ED00165C9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		FBCEFA8367D4C7562196AAB4 /* libPods-CoquiMateMobile UAT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB25B2F3AA84446D912E45A /* libPods-CoquiMateMobile UAT.a */; };
-		532CAF8FBADE4B3FA35F7E0B /* DancingScript-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0E65BF8EE5B43B288A9DDFA /* DancingScript-Bold.ttf */; };
-		4783E453C2F34088A277E19E /* DancingScript-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63D5BCA85F0441378FF9DC7E /* DancingScript-Medium.ttf */; };
 		E7D557516EAE410FAFCC1B78 /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6ECCC023A15840CEACEE8B29 /* DancingScript-Regular.ttf */; };
-		A97C607A2B45452CBDBA252E /* DancingScript-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6FC0B6C3BF34003B4525E05 /* DancingScript-SemiBold.ttf */; };
-		38FBCADD9617473A80ABF9C3 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1939507F2C864126841D3F6C /* Poppins-Bold.ttf */; };
 		EEFFB462B1CD4B7E8434CCB0 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55FCE27C9239477AB93089F5 /* Poppins-Light.ttf */; };
-		347A107A2C2E48AAA2EBDEF2 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 206C5C4D05F34040BD9A52CE /* Poppins-Medium.ttf */; };
-		9C858976455143D6A9E4FEE4 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20B1FF573F9543B08C269B88 /* Poppins-Regular.ttf */; };
-		05BC9DF548FF4DE597675532 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 888ABE4F12474FB3B353BEB0 /* Poppins-SemiBold.ttf */; };
-		83D0722D4E1E467F8AE1D5C6 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = F7B76ACEACD24FF68239A0EC /* .gitkeep */; };
+		FBCEFA8367D4C7562196AAB4 /* libPods-CoquiMateMobile UAT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB25B2F3AA84446D912E45A /* libPods-CoquiMateMobile UAT.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,29 +44,29 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CoquiMateMobile/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CoquiMateMobile/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CoquiMateMobile/main.m; sourceTree = "<group>"; };
+		1939507F2C864126841D3F6C /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		206C5C4D05F34040BD9A52CE /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		20B1FF573F9543B08C269B88 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		21E62AAABC737A1A57CAB2E0 /* Pods-CoquiMateMobile Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoquiMateMobile Dev.release.xcconfig"; path = "Target Support Files/Pods-CoquiMateMobile Dev/Pods-CoquiMateMobile Dev.release.xcconfig"; sourceTree = "<group>"; };
 		3AB25B2F3AA84446D912E45A /* libPods-CoquiMateMobile UAT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoquiMateMobile UAT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FCE27C9239477AB93089F5 /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		582D71B31C9F0A9A9AB9D2B4 /* Pods-CoquiMateMobile UAT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoquiMateMobile UAT.release.xcconfig"; path = "Target Support Files/Pods-CoquiMateMobile UAT/Pods-CoquiMateMobile UAT.release.xcconfig"; sourceTree = "<group>"; };
 		61823627FF70130DD7C51E7F /* Pods-CoquiMateMobile UAT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoquiMateMobile UAT.debug.xcconfig"; path = "Target Support Files/Pods-CoquiMateMobile UAT/Pods-CoquiMateMobile UAT.debug.xcconfig"; sourceTree = "<group>"; };
+		63D5BCA85F0441378FF9DC7E /* DancingScript-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-Medium.ttf"; path = "../assets/fonts/DancingScript-Medium.ttf"; sourceTree = "<group>"; };
+		6ECCC023A15840CEACEE8B29 /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-Regular.ttf"; path = "../assets/fonts/DancingScript-Regular.ttf"; sourceTree = "<group>"; };
 		7279FFCA1F9BE52B576AA12A /* Pods-CoquiMateMobile Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoquiMateMobile Dev.debug.xcconfig"; path = "Target Support Files/Pods-CoquiMateMobile Dev/Pods-CoquiMateMobile Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = CoquiMateMobile/BootSplash.storyboard; sourceTree = "<group>"; };
+		888ABE4F12474FB3B353BEB0 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		AD887E8AF6ABB4F29C599728 /* libPods-CoquiMateMobile Production.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoquiMateMobile Production.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36F32CE275F352200165C9A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		B36F32E0275F35C600165C9A /* CoquiMateMobile UAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoquiMateMobile UAT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36F32F3275F35ED00165C9A /* CoquiMateMobile Production.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoquiMateMobile Production.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0E65BF8EE5B43B288A9DDFA /* DancingScript-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-Bold.ttf"; path = "../assets/fonts/DancingScript-Bold.ttf"; sourceTree = "<group>"; };
+		D6FC0B6C3BF34003B4525E05 /* DancingScript-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-SemiBold.ttf"; path = "../assets/fonts/DancingScript-SemiBold.ttf"; sourceTree = "<group>"; };
 		D85A22690DE9B5CC1270C723 /* Pods-CoquiMateMobile Production.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoquiMateMobile Production.release.xcconfig"; path = "Target Support Files/Pods-CoquiMateMobile Production/Pods-CoquiMateMobile Production.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F7B76ACEACD24FF68239A0EC /* .gitkeep */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = .gitkeep; path = ../assets/fonts/.gitkeep; sourceTree = "<group>"; };
 		FE1DABF48BE989A13ED72E1C /* Pods-CoquiMateMobile Production.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoquiMateMobile Production.debug.xcconfig"; path = "Target Support Files/Pods-CoquiMateMobile Production/Pods-CoquiMateMobile Production.debug.xcconfig"; sourceTree = "<group>"; };
-		D0E65BF8EE5B43B288A9DDFA /* DancingScript-Bold.ttf */ = {isa = PBXFileReference; name = "DancingScript-Bold.ttf"; path = "../assets/fonts/DancingScript-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		63D5BCA85F0441378FF9DC7E /* DancingScript-Medium.ttf */ = {isa = PBXFileReference; name = "DancingScript-Medium.ttf"; path = "../assets/fonts/DancingScript-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6ECCC023A15840CEACEE8B29 /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; name = "DancingScript-Regular.ttf"; path = "../assets/fonts/DancingScript-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D6FC0B6C3BF34003B4525E05 /* DancingScript-SemiBold.ttf */ = {isa = PBXFileReference; name = "DancingScript-SemiBold.ttf"; path = "../assets/fonts/DancingScript-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1939507F2C864126841D3F6C /* Poppins-Bold.ttf */ = {isa = PBXFileReference; name = "Poppins-Bold.ttf"; path = "../assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		55FCE27C9239477AB93089F5 /* Poppins-Light.ttf */ = {isa = PBXFileReference; name = "Poppins-Light.ttf"; path = "../assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		206C5C4D05F34040BD9A52CE /* Poppins-Medium.ttf */ = {isa = PBXFileReference; name = "Poppins-Medium.ttf"; path = "../assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		20B1FF573F9543B08C269B88 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; name = "Poppins-Regular.ttf"; path = "../assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		888ABE4F12474FB3B353BEB0 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBold.ttf"; path = "../assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F7B76ACEACD24FF68239A0EC /* .gitkeep */ = {isa = PBXFileReference; name = ".gitkeep"; path = "../assets/fonts/.gitkeep"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +127,23 @@
 			name = CoquiMateMobile;
 			sourceTree = "<group>";
 		};
+		1F9CE9D976194F85AE9FDC0F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0E65BF8EE5B43B288A9DDFA /* DancingScript-Bold.ttf */,
+				63D5BCA85F0441378FF9DC7E /* DancingScript-Medium.ttf */,
+				6ECCC023A15840CEACEE8B29 /* DancingScript-Regular.ttf */,
+				D6FC0B6C3BF34003B4525E05 /* DancingScript-SemiBold.ttf */,
+				1939507F2C864126841D3F6C /* Poppins-Bold.ttf */,
+				55FCE27C9239477AB93089F5 /* Poppins-Light.ttf */,
+				206C5C4D05F34040BD9A52CE /* Poppins-Medium.ttf */,
+				20B1FF573F9543B08C269B88 /* Poppins-Regular.ttf */,
+				888ABE4F12474FB3B353BEB0 /* Poppins-SemiBold.ttf */,
+				F7B76ACEACD24FF68239A0EC /* .gitkeep */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,24 +201,6 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
-		};
-		1F9CE9D976194F85AE9FDC0F /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				D0E65BF8EE5B43B288A9DDFA /* DancingScript-Bold.ttf */,
-				63D5BCA85F0441378FF9DC7E /* DancingScript-Medium.ttf */,
-				6ECCC023A15840CEACEE8B29 /* DancingScript-Regular.ttf */,
-				D6FC0B6C3BF34003B4525E05 /* DancingScript-SemiBold.ttf */,
-				1939507F2C864126841D3F6C /* Poppins-Bold.ttf */,
-				55FCE27C9239477AB93089F5 /* Poppins-Light.ttf */,
-				206C5C4D05F34040BD9A52CE /* Poppins-Medium.ttf */,
-				20B1FF573F9543B08C269B88 /* Poppins-Regular.ttf */,
-				888ABE4F12474FB3B353BEB0 /* Poppins-SemiBold.ttf */,
-				F7B76ACEACD24FF68239A0EC /* .gitkeep */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -655,6 +654,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CoquiMateMobile/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Coqui Mate";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -680,6 +680,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = CoquiMateMobile/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Coqui Mate";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -832,6 +833,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CoquiMateMobile/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Coqui Mate";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -857,6 +859,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = CoquiMateMobile/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Coqui Mate";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -882,6 +885,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CoquiMateMobile/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Coqui Mate";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -907,6 +911,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = CoquiMateMobile/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Coqui Mate";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
