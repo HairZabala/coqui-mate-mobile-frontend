@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     paddingTop: 10,
     paddingBottom: 10,
-    fontFamily: theme.fonts.system,
+    fontFamily: theme.fonts.poppins400,
     color: theme.colors.black,
     flex: 1,
     paddingHorizontal: 0,

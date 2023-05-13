@@ -16,7 +16,7 @@ const Title: FC<Props & TextProps> = ({ style, size = 24, color = theme.colors.b
 
 const styles = StyleSheet.create({
   text: {
-    fontFamily: theme.fonts.system,
+    fontFamily: theme.fonts.poppins400,
   },
 });
 

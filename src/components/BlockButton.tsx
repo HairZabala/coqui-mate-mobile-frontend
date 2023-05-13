@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 27,
     color: theme.colors.white,
-    fontFamily: theme.fonts.system,
+    fontFamily: theme.fonts.poppins400,
   },
   container: {
     height: DEFAULT_BLOCK_BUTTON_HEIGHT,

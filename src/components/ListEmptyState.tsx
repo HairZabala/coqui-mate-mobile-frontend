@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 16,
   },
   text: {
-    fontFamily: theme.fonts.system,
+    fontFamily: theme.fonts.poppins400,
     color: theme.colors.white,
   },
 });

@@ -18,7 +18,7 @@ const AppText: FC<AppTextProps> = ({ size = 16, color = theme.colors.black, styl
 
 const styles = StyleSheet.create({
   text: {
-    fontFamily: theme.fonts.system,
+    fontFamily: theme.fonts.poppins400,
     fontSize: 16,
   },
 });

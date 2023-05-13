@@ -226,12 +226,12 @@ const styles = StyleSheet.create({
   maxCharacters: {
     fontSize: 13,
     color: theme.colors.black,
-    fontFamily: theme.fonts.system,
+    fontFamily: theme.fonts.poppins400,
     marginBottom: 15,
     opacity: 0.5,
   },
   placeholder: {
-    fontFamily: theme.fonts.system,
+    fontFamily: theme.fonts.poppins400,
     fontSize: 16,
     color: theme.colors.black,
     letterSpacing: 0.2,

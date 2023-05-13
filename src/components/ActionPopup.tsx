@@ -60,7 +60,7 @@ const ActionPopup: FC<ActionPopupProps> = ({ visible, title, body, onBackdropPre
 
 const styles = StyleSheet.create({
   body: {
-    fontFamily: theme.fonts.system,
+    fontFamily: theme.fonts.poppins400,
     fontSize: 15,
     color: theme.colors.black,
     opacity: 0.5,
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontFamily: theme.fonts.system,
+    fontFamily: theme.fonts.poppins400,
     fontSize: 22,
     color: theme.colors.black,
     textAlign: 'center',

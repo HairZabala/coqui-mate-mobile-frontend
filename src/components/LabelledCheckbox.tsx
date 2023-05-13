@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   title: {
-    fontFamily: theme.fonts.system,
+    fontFamily: theme.fonts.poppins400,
     color: theme.colors.black,
   },
 });

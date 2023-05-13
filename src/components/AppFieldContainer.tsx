@@ -40,6 +40,6 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
   title: {
-    fontFamily: theme.fonts.system,
+    fontFamily: theme.fonts.poppins400,
   },
 });
