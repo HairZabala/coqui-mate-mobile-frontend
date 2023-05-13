@@ -52,7 +52,7 @@ const ModalNavigator: FC = () => {
       () => {
         setSplashActive(false);
       },
-      __DEV__ ? 250 : SPLASH_ANIM_RUNTIME_MS,
+      __DEV__ ? SPLASH_ANIM_RUNTIME_MS : SPLASH_ANIM_RUNTIME_MS,
     );
   }, []);
 

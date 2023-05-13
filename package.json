@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android --scheme devDebug",
+    "android": "react-native run-android",
     "codegen": "graphql-codegen --config src/graphql/codegen.yml",
     "ios": "react-native run-ios --scheme 'CoquiMateMobile Dev'",
     "start": "react-native start",
