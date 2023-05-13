@@ -1,0 +1,5 @@
+mutation profileUpdateProfilePicture($profilePictureId: ID!) {
+  profileUpdateProfilePicture(profilePictureId: $profilePictureId) {
+    ...UserBase
+  }
+}

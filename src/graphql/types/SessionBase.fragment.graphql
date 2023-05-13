@@ -1,0 +1,6 @@
+fragment SessionBase on Session {
+  token
+  user {
+    ...UserBase
+  }
+}

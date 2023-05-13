@@ -1,0 +1,8 @@
+fragment ProfileBase on Profile {
+  id
+  isMe
+  name
+  profilePicture {
+    ...ImageMediaBase
+  }
+}

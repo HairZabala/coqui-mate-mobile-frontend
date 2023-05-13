@@ -1,0 +1,8 @@
+mutation userLoginOrSignup($phoneNumber: String!, $verificationCode: String!) {
+  userLoginOrSignup(phoneNumber: $phoneNumber, verificationCode: $verificationCode) {
+    token
+    user {
+      ...UserBase
+    }
+  }
+}

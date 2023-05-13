@@ -1,0 +1,11 @@
+fragment UserBase on User {
+  id
+  phoneNumber
+  state
+  profile {
+    ...ProfileBase
+  }
+  draftProfile {
+    ...DraftProfileBase
+  }
+}

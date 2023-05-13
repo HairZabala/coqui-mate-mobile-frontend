@@ -1,0 +1,7 @@
+fragment VideoMediaBase on VideoMedia {
+  id
+  durationSeconds
+  mimeType
+  url
+  uploadUrl
+}

@@ -1,0 +1,60 @@
+image: node:latest
+
+stages:
+  - dependencies
+  - validate
+
+# Installs all node modules
+yarn-install:
+  stage: dependencies
+  artifacts:
+    paths:
+      - node_modules/
+  cache:
+    paths:
+      - node_modules/
+    key:
+      files:
+        - yarn.lock
+  script:
+    - yarn
+
+# # Lints the apps for signs of poor code quality
+lint:
+  stage: validate
+  dependencies:
+    - yarn-install
+  script:
+    - yarn lint
+
+# # Compiles the typescript
+check-typescript:
+  stage: validate
+  dependencies:
+    - yarn-install
+  script:
+    - yarn tsc -project tsconfig.json
+
+# # Verifies the code is properly formatted
+check-formatted:
+  stage: validate
+  dependencies:
+    - yarn-install
+  script:
+    - yarn prettier src/ --check
+# # Only necessary for projects with high-security requirements
+# sonarcloud-check:
+#   image:
+#     name: sonarsource/sonar-scanner-cli:latest
+#     entrypoint: ['']
+#   stage: validate
+#   cache:
+#     key: '${CI_JOB_NAME}'
+#     paths:
+#       - .sonar/cache
+#   script:
+#     - sonar-scanner
+# only:
+#   - merge_requests
+#   - master
+#   - develop
