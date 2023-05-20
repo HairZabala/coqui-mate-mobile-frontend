@@ -4,12 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
 import React, { FC, useEffect, useState } from 'react';
 import CountryCodeSelectScreen from '../containers/CountryCodeSelectScreen';
-import Landing from '../features/auth/containers/Landing';
-import ValueSlides from '../features/auth/containers/ValueSlides';
 import Splash from '../features/splash/containers/Splash';
 import usePrevious from '../hooks/usePrevious';
 import useUpdateEffect from '../hooks/useUpdateEffect';
-import { useAppSelector } from '../store';
 import { SPLASH_ANIM_RUNTIME_MS } from '../utils/constants';
 import { navigationRef } from '../utils/rootNavigation';
 import AuthenticatedStackNavigator from './AuthenticatedStackNavigator';
@@ -38,7 +35,6 @@ const ModalStack = createStackNavigator<ModalNavigatorParamList>();
 
 const ModalNavigator: FC = () => {
   const [authToken] = useAuthToken();
-  const valueSlidesSeen = useAppSelector((state) => state.singleViewItems.seenValueSlides);
   const previousAuthToken = usePrevious(authToken);
 
   const [splashActive, setSplashActive] = useState(true);
@@ -70,13 +66,17 @@ const ModalNavigator: FC = () => {
       <ModalStack.Navigator
         screenOptions={{ presentation: 'modal', cardStyleInterpolator: CardStyleInterpolators.forVerticalIOS }}>
         {splashActive && <ModalStack.Screen name={ROUTE_SPLASH} component={Splash} options={splashTransitionOptions} />}
+        {/* {!valueSlidesSeen && (
+          <ModalStack.Screen name={ROUTE_VALUE_SLIDES} component={ValueSlides} options={splashTransitionOptions} />
+        )} */}
         {authToken === null && (
-          <>
-            {!valueSlidesSeen && (
-              <ModalStack.Screen name={ROUTE_VALUE_SLIDES} component={ValueSlides} options={splashTransitionOptions} />
-            )}
-            <ModalStack.Screen name={ROUTE_LANDING} component={Landing} options={splashTransitionOptions} />
-          </>
+          <ModalStack.Screen
+            name={ROUTE_AUTHENTICATION_NAVIGATOR}
+            component={AuthenticationNavigator}
+            options={{
+              headerShown: false,
+            }}
+          />
         )}
         {authToken !== null && (
           <ModalStack.Screen
@@ -85,13 +85,6 @@ const ModalNavigator: FC = () => {
             options={splashTransitionOptions}
           />
         )}
-        <ModalStack.Screen
-          name={ROUTE_AUTHENTICATION_NAVIGATOR}
-          component={AuthenticationNavigator}
-          options={{
-            headerShown: false,
-          }}
-        />
         <ModalStack.Screen
           name={ROUTE_COUNTRY_CODE_SELECT}
           component={CountryCodeSelectScreen}

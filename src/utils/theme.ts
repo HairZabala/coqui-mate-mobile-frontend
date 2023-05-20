@@ -3,7 +3,7 @@ enum Colors {
   red = '#FF404B',
   yellow = '#FFCD6C',
   green = '#117D56',
-  error = '#FF3458',
+  error = '#FF404B',
   purple = '#B36EF1',
 
   backgroundGray = '#FAFAFB',

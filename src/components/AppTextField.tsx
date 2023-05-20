@@ -1,6 +1,6 @@
 import { useField, useFormikContext } from 'formik';
 import React, { FC, useCallback } from 'react';
-import { StyleProp, ViewStyle } from 'react-native';
+import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 import AppFieldContainer from './AppFieldContainer';
 import AppTextInput, { AppTextInputProps } from './AppTextInput';
 
@@ -12,6 +12,7 @@ export interface AppTextFieldProps extends AppTextInputProps {
   placeholder: string;
   showErrorAfterTouch?: boolean;
   showErrorAfterFormSubmit?: boolean;
+  titleStyle?: StyleProp<TextStyle>;
   containerStyle?: StyleProp<ViewStyle>;
   inputContainerStyle?: StyleProp<ViewStyle>;
   fieldContainerStyle?: StyleProp<ViewStyle>;
@@ -24,6 +25,7 @@ const AppTextField: FC<AppTextFieldProps> = (props) => {
     showErrorAfterTouch = true,
     showErrorAfterFormSubmit = true,
     fieldContainerStyle,
+    titleStyle,
     containerStyle,
     inputContainerStyle,
     ...rest
@@ -42,6 +44,7 @@ const AppTextField: FC<AppTextFieldProps> = (props) => {
   return (
     <AppFieldContainer
       title={title}
+      titleStyle={titleStyle}
       showError={showError}
       error={error}
       containerStyle={containerStyle}

@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.black,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 32,
+    borderRadius: 16,
   },
   textContainer: {
     flexDirection: 'row',
