@@ -1,10 +1,16 @@
+import EyeIcon from '@assets/images/eye-ic.png';
+import EyeOffIcon from '@assets/images/eye-off-ic.png';
+import AppErrorLabel from '@components/AppError';
 import AppText from '@components/AppText';
 import AppTextField from '@components/AppTextField';
 import BlockButton from '@components/BlockButton';
+import useAuthToken from '@hooks/useAuthToken';
+import { apolloErrorToString } from '@utils/errorCodes';
 import theme from '@utils/theme';
 import { Formik, FormikProps } from 'formik';
 import React, { useCallback, useRef, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { useUserLoginMutation } from '../../../graphql/generated';
 import { LoginFormFields, LoginFormValues, loginValidationSchema } from '../formik/LoginFormValues';
 
 const INITIAL_VALUES: LoginFormValues = {
@@ -15,10 +21,26 @@ const INITIAL_VALUES: LoginFormValues = {
 const LoginForm = () => {
   const formRef = useRef<FormikProps<LoginFormValues>>(null);
 
-  const [securePassword, setSecurePassword] = useState(true);
+  const [_, setAuthToken] = useAuthToken();
 
-  const onSubmit = (values: LoginFormValues) => {
-    console.debug({ values });
+  const [securePassword, setSecurePassword] = useState(true);
+  const [userLogin, { loading, error: loginError }] = useUserLoginMutation();
+
+  const onSubmit = async (values: LoginFormValues) => {
+    try {
+      const { data } = await userLogin({
+        variables: {
+          email: values[LoginFormFields.EMAIL],
+          password: values[LoginFormFields.PASSWORD],
+        },
+      });
+
+      if (data) {
+        setAuthToken(data.session.token);
+      }
+    } catch (error) {
+      console.debug(error);
+    }
   };
 
   const securePasswordToggle = useCallback(() => {
@@ -34,7 +56,7 @@ const LoginForm = () => {
         validationSchema={loginValidationSchema}
         validateOnChange
         validateOnMount>
-        {({ isValid, submitForm, isSubmitting }: FormikProps<LoginFormValues>) => {
+        {({ isValid, submitForm }: FormikProps<LoginFormValues>) => {
           return (
             <View>
               <AppText style={styles.title}>Iniciar sesión</AppText>
@@ -45,6 +67,7 @@ const LoginForm = () => {
                 fieldName={LoginFormFields.EMAIL}
                 style={styles.input}
                 keyboardType='email-address'
+                autoCapitalize='none'
                 placeholderTextColor={theme.colors.neutral50}
                 placeholder='correo@coquimate.com.co'
                 inputContainerStyle={styles.inputContainer}
@@ -57,18 +80,28 @@ const LoginForm = () => {
                   titleStyle={styles.label}
                   fieldName={LoginFormFields.PASSWORD}
                   style={styles.input}
-                  secureTextEntry={true}
+                  secureTextEntry={securePassword}
+                  autoCapitalize='none'
                   placeholderTextColor={theme.colors.neutral50}
                   placeholder='Ingrese contraseña'
                   inputContainerStyle={styles.inputContainer}
                   highlightOnFocus
                 />
+                <View style={styles.showPasswordContainer}>
+                  <TouchableOpacity onPress={securePasswordToggle}>
+                    {securePassword ? <Image source={EyeOffIcon} /> : <Image source={EyeIcon} />}
+                  </TouchableOpacity>
+                </View>
+              </View>
+
+              <View>
+                {loginError && <AppErrorLabel style={styles.error}>{apolloErrorToString(loginError)}</AppErrorLabel>}
               </View>
 
               <BlockButton
                 text={'Ingresar'}
                 onPress={submitForm}
-                loading={isSubmitting}
+                loading={loading}
                 disabled={!isValid}
                 containerStyle={styles.buttonContainer}
                 buttonColor={theme.colors.primary}
@@ -90,6 +123,9 @@ const styles = StyleSheet.create({
     width: '100%',
     maxWidth: 500,
   },
+  error: {
+    marginVertical: 10,
+  },
   input: {
     fontFamily: theme.fonts.poppins400,
   },
@@ -103,11 +139,16 @@ const styles = StyleSheet.create({
   label: {
     color: theme.colors.neutral70,
   },
+  showPasswordContainer: {
+    position: 'absolute',
+    right: 20,
+    top: 48,
+  },
   title: {
     fontFamily: theme.fonts.poppins700,
     fontSize: 28,
     color: theme.colors.primary,
-    marginBottom: 24,
+    marginBottom: 30,
     textAlign: 'center',
   },
 });

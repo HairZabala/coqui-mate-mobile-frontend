@@ -1,3 +1,0 @@
-mutation userSendPhoneNumberVerificationCode($mobileNumber: String!) {
-  userSendPhoneNumberVerificationCode(phoneNumber: $mobileNumber)
-}

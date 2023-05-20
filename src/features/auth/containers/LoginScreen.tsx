@@ -2,7 +2,7 @@ import { useStatusBar } from '@hooks/useStatusBar';
 import { useHeaderHeight } from '@react-navigation/elements';
 import theme from '@utils/theme';
 import React from 'react';
-import { KeyboardAvoidingView, Platform, StyleSheet, View } from 'react-native';
+import { Keyboard, KeyboardAvoidingView, Platform, StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import LeftBanner from '../components/LeftBanner';
 import LoginForm from '../components/LoginForm';
@@ -18,9 +18,11 @@ const Login = () => {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.container}>
         <LeftBanner />
-        <View style={styles.containerRight}>
-          <LoginForm />
-        </View>
+        <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+          <View style={styles.containerRight}>
+            <LoginForm />
+          </View>
+        </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );

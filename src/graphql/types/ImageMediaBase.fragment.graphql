@@ -1,7 +1,0 @@
-fragment ImageMediaBase on ImageMedia {
-  id
-  mimeType
-  thumbnailUrl
-  uploadUrl
-  url
-}

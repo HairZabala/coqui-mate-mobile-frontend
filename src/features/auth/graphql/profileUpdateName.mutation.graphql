@@ -1,5 +1,0 @@
-mutation profileUpdateName($name: String!) {
-  profileUpdateName(name: $name) {
-    ...UserBase
-  }
-}

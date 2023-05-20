@@ -1,7 +1,0 @@
-fragment DraftProfileBase on DraftProfile {
-  id
-  name
-  profilePicture {
-    ...ImageMediaBase
-  }
-}

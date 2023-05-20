@@ -1,4 +1,4 @@
-fragment SessionBase on Session {
+fragment SessionBase on AuthResponse {
   token
   user {
     ...UserBase
