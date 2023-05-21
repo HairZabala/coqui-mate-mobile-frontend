@@ -1,3 +1,4 @@
+import CheckImage from '@assets/images/check-ic.png';
 import EyeIcon from '@assets/images/eye-ic.png';
 import EyeOffIcon from '@assets/images/eye-off-ic.png';
 import AppErrorLabel from '@components/AppError';
@@ -8,22 +9,29 @@ import useAuthToken from '@hooks/useAuthToken';
 import { apolloErrorToString } from '@utils/errorCodes';
 import theme from '@utils/theme';
 import { Formik, FormikProps } from 'formik';
-import React, { useCallback, useRef, useState } from 'react';
-import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
+import { Image, Pressable, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { useUserLoginMutation } from '../../../graphql/generated';
+import { useAppDispatch, useAppSelector } from '../../../store';
 import { LoginFormFields, LoginFormValues, loginValidationSchema } from '../formik/LoginFormValues';
-
-const INITIAL_VALUES: LoginFormValues = {
-  [LoginFormFields.EMAIL]: '',
-  [LoginFormFields.PASSWORD]: '',
-};
+import { SET_REMEMBER_ME } from '../store/authTypes';
 
 const LoginForm = () => {
   const formRef = useRef<FormikProps<LoginFormValues>>(null);
 
   const [_, setAuthToken] = useAuthToken();
+  const { emailRemember, rememberMe: rememberMeGlobal } = useAppSelector((state) => state.auth);
+  const dispatch = useAppDispatch();
 
-  const [securePassword, setSecurePassword] = useState(true);
+  const INITIAL_VALUES: LoginFormValues = useMemo(() => {
+    return {
+      [LoginFormFields.EMAIL]: emailRemember,
+      [LoginFormFields.PASSWORD]: '',
+    };
+  }, [emailRemember]);
+
+  const [securePassword, setSecurePassword] = useState(false);
+  const [rememberMe, setRememberMe] = useState(rememberMeGlobal);
   const [userLogin, { loading, error: loginError }] = useUserLoginMutation();
 
   const onSubmit = async (values: LoginFormValues) => {
@@ -37,6 +45,13 @@ const LoginForm = () => {
 
       if (data) {
         setAuthToken(data.session.token);
+        dispatch({
+          type: SET_REMEMBER_ME,
+          payload: {
+            rememberMe: rememberMe,
+            emailRemember: rememberMe ? values[LoginFormFields.EMAIL] : '',
+          },
+        });
       }
     } catch (error) {
       console.debug(error);
@@ -46,6 +61,10 @@ const LoginForm = () => {
   const securePasswordToggle = useCallback(() => {
     setSecurePassword(!securePassword);
   }, [securePassword]);
+
+  const onRememberMePress = useCallback(() => {
+    setRememberMe(!rememberMe);
+  }, [rememberMe]);
 
   return (
     <View style={styles.container}>
@@ -93,6 +112,15 @@ const LoginForm = () => {
                   </TouchableOpacity>
                 </View>
               </View>
+              <Pressable style={styles.pressableCheck} onPress={onRememberMePress}>
+                <View style={[styles.checkBox, rememberMe ? styles.checked : styles.unChecked]}>
+                  <Image source={CheckImage} />
+                </View>
+                <AppText size={15} color={theme.colors.neutral70}>
+                  Recuérdame
+                </AppText>
+              </Pressable>
+              <Pressable onPress={() => console.debug('forgot password')} />
 
               <View>
                 {loginError && <AppErrorLabel style={styles.error}>{apolloErrorToString(loginError)}</AppErrorLabel>}
@@ -119,6 +147,17 @@ const styles = StyleSheet.create({
   buttonContainer: {
     marginVertical: 10,
   },
+  checkBox: {
+    width: 24,
+    height: 24,
+    marginRight: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 4,
+  },
+  checked: {
+    backgroundColor: theme.colors.primary,
+  },
   container: {
     width: '100%',
     maxWidth: 500,
@@ -139,10 +178,14 @@ const styles = StyleSheet.create({
   label: {
     color: theme.colors.neutral70,
   },
+  pressableCheck: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   showPasswordContainer: {
     position: 'absolute',
     right: 20,
-    top: 48,
+    top: 46,
   },
   title: {
     fontFamily: theme.fonts.poppins700,
@@ -150,6 +193,9 @@ const styles = StyleSheet.create({
     color: theme.colors.primary,
     marginBottom: 30,
     textAlign: 'center',
+  },
+  unChecked: {
+    backgroundColor: theme.colors.bg70,
   },
 });
 

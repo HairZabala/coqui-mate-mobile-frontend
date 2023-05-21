@@ -7,5 +7,5 @@
   "eslint.validate": ["javascript"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "cSpell.language": "en,es",
-  "cSpell.words": ["Coqui"]
+  "cSpell.words": ["Coqui", "Recuérdame"]
 }

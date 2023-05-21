@@ -39,7 +39,9 @@ const middleware = [thunk];
 if (__DEV__) {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const { logger } = require('redux-logger');
-
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const createDebugger = require('redux-flipper').default;
+  middleware.push(createDebugger());
   middleware.push(logger);
 }
 
